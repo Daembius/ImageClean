@@ -3,6 +3,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import multer from 'multer'
 import { createServer } from 'http'
+import path from 'path' // Import the path module here
 import metadataRoutes from './routes/metadata.js'
 
 // Configure environment variables
