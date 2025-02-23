@@ -3,8 +3,13 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import multer from 'multer'
 import { createServer } from 'http'
-import path from 'path' // Import the path module here
+import path from 'path'
+import { fileURLToPath } from 'url'
 import metadataRoutes from './routes/metadata.js'
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // Configure environment variables
 dotenv.config()
